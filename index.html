@@ -12,33 +12,10 @@
         
         <div class="form-group">
             <label for="product">Выберите товар:</label>
-            <div class="product-cards">
-                <div class="product-card" data-value="1">
-                    <div class="product-icon">📱</div>
-                    <div class="product-details">
-                        <div class="product-name">Смартфон</div>
-                        <div class="product-price">25 000 руб.</div>
-                    </div>
-                </div>
-                <div class="product-card" data-value="2">
-                    <div class="product-icon">💻</div>
-                    <div class="product-details">
-                        <div class="product-name">Ноутбук</div>
-                        <div class="product-price">65 000 руб.</div>
-                    </div>
-                </div>
-                <div class="product-card" data-value="3">
-                    <div class="product-icon">🎧</div>
-                    <div class="product-details">
-                        <div class="product-name">Наушники</div>
-                        <div class="product-price">8 500 руб.</div>
-                    </div>
-                </div>
-            </div>
-            <select id="product" style="display: none;">
-                <option value="1">Смартфон - 25 000 руб.</option>
-                <option value="2">Ноутбук - 65 000 руб.</option>
-                <option value="3">Наушники - 8 500 руб.</option>
+            <select id="product">
+                <option value="25000">Смартфон - 25 000 руб.</option>
+                <option value="65000">Ноутбук - 65 000 руб.</option>
+                <option value="8500">Наушники - 8 500 руб.</option>
             </select>
         </div>
         
@@ -53,10 +30,6 @@
         <div class="result" id="result">
             <h3>Стоимость заказа:</h3>
             <p id="total-cost">0 руб.</p>
-            <div class="product-info">
-                <span id="selected-product-info">Товар: -</span>
-                <span id="quantity-info">Количество: 0</span>
-            </div>
         </div>
     </div>
 
