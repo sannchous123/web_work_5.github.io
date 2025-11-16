@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const quantityError = document.getElementById('quantity-error');
     
     const prices = {
-        1: 25000,
-        2: 65000,
-        3: 8500
+        '1': 25000,
+        '2': 65000,
+        '3': 8500
     };
     
     const productNames = {
-        1: "Смартфон",
-        2: "Ноутбук",
-        3: "Наушники"
+        '1': "Смартфон",
+        '2': "Ноутбук",
+        '3': "Наушники"
     };
     
     productCards.forEach(card => {
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     productCards[0].classList.add('selected');
+    productSelect.value = '1';
     
     quantityInput.addEventListener('input', function() {
         const value = parseInt(this.value);
@@ -58,15 +59,5 @@ document.addEventListener('DOMContentLoaded', function() {
         quantityInfo.textContent = `Количество: ${quantity}`;
         
         resultDiv.style.display = 'block';
-        
-        setTimeout(() => {
-            resultDiv.style.opacity = '1';
-            resultDiv.style.transform = 'translateY(0)';
-        }, 10);
     });
-});
-
-            }
-        });
-    }
 });
