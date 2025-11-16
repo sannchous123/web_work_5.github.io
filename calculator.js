@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultDiv = document.getElementById('result');
     const totalCostElement = document.getElementById('total-cost');
     const quantityError = document.getElementById('quantity-error');
-    
+
     calculateButton.addEventListener('click', function() {
         const price = parseInt(productSelect.value);
         const quantity = parseInt(quantityInput.value);
         
         if (isNaN(quantity) || quantity < 1) {
             quantityError.style.display = 'block';
+            resultDiv.style.display = 'none';
             return;
         }
         
