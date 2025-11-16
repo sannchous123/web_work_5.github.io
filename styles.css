@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-color: #f5f5f5;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,10 +16,10 @@ body {
 
 .calculator {
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     padding: 30px;
 }
 
@@ -27,8 +27,7 @@ h1 {
     color: #333;
     text-align: center;
     margin-bottom: 25px;
-    font-weight: 600;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .form-group {
@@ -38,50 +37,38 @@ h1 {
 label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
-    color: #555;
+    color: #333;
 }
 
 input, select {
     width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e1e1e1;
-    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-input:focus, select:focus {
-    border-color: #2575fc;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.1);
 }
 
 button {
-    background: linear-gradient(to right, #2575fc, #6a11cb);
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 14px 20px;
+    border-radius: 4px;
+    padding: 12px 20px;
     font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
     width: 100%;
-    transition: all 0.3s ease;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 117, 252, 0.4);
+    background-color: #0056b3;
 }
 
 .result {
     margin-top: 25px;
-    padding: 20px;
+    padding: 15px;
     background-color: #f8f9fa;
-    border-radius: 8px;
+    border-radius: 4px;
     text-align: center;
-    border-left: 4px solid #2575fc;
     display: none;
 }
 
@@ -91,80 +78,14 @@ button:hover {
 }
 
 .result p {
-    font-size: 24px;
-    font-weight: 700;
-    color: #2575fc;
-}
-
-.product-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
 }
 
 .error {
-    color: #e74c3c;
+    color: #dc3545;
     font-size: 14px;
     margin-top: 5px;
     display: none;
-}
-
-.product-card {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.product-card:hover {
-    border-color: #2575fc;
-    background-color: #f8faff;
-}
-
-.product-card.selected {
-    border-color: #2575fc;
-    background-color: #e8f0fe;
-}
-
-.product-icon {
-    width: 50px;
-    height: 50px;
-    background-color: #e8f0fe;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    color: #2575fc;
-    font-size: 24px;
-}
-
-.product-details {
-    flex: 1;
-}
-
-.product-name {
-    font-weight: 600;
-    color: #333;
-}
-
-.product-price {
-    color: #2575fc;
-    font-weight: 600;
-}
-
-@media (max-width: 600px) {
-    .calculator {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 24px;
-    }
 }
