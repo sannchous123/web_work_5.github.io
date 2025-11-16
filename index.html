@@ -2,422 +2,64 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Крутой сайт</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-image: url(data:image/jpeg;base64,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);
-            background-size: cover; 
-            background-position: center; 
-            min-height: 100vh;
-        }
-        
-        .logo-img {
-            width: 50px;
-            height: 50px;
-        }
-        
-        .nav-custom {
-            background-color: #00a2ff;
-        }
-        
-        .content-section {
-            background-color: #00a2ff;
-        }
-        
-        .table-custom tr:nth-child(even) {
-            background-color: #1d32a7;
-        }
-        
-        .footer-custom {
-            background-color: #f33d05;
-        }
-        
-        @media (min-width: 768px) {
-            .logo-img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-        
-        .calculator {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .result {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #e9ecef;
-            border-radius: 4px;
-        }
-    </style>
-    
-    
-    <script src="calculator.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   
-    <header class="sticky-top">
-        <div class="container-fluid p-0">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 nav-custom">
-                
-                <div class="d-flex align-items-center mb-3 mb-md-0">
-                    <img src="data:image/jpeg;base64,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" alt="Мой Логотип" class="logo-img me-2" alt="Мой Логотип" class="logo-img me-2">
-                    <h1 class="h3 mb-0 text-light">Крутой сайт</h1>
+    <div class="calculator">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <div class="form-group">
+            <label for="product">Выберите товар:</label>
+            <div class="product-cards">
+                <div class="product-card" data-value="1">
+                    <div class="product-icon">📱</div>
+                    <div class="product-details">
+                        <div class="product-name">Смартфон</div>
+                        <div class="product-price">25 000 руб.</div>
+                    </div>
                 </div>
-                
-                
-                <nav class="d-flex flex-wrap justify-content-center gap-2 gap-md-3">
-                    <a href="index.html" class="btn btn-outline-light btn-sm">Главная страница</a>
-                    <a href="about.html" class="btn btn-outline-light btn-sm">Внутренняя страница</a>
-                    <a href="https://kubsu.ru/" class="btn btn-outline-light btn-sm">КубГу</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    
-    <main class="container my-4">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="p-3 p-md-4 rounded content-section">
-                    <h1 class="text-center mb-4">Главная страница</h1>
-                    
-                    <h2 class="mb-3">Ссылки</h2>
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="index.html" class="text-danger fw-bold">Главная страница</a></li>
-                                <li class="mb-2"><a href="about.html">Внутренняя страница</a></li>
-                                <li class="mb-2"><a href="http://kubsu.ru/" title="Кубанский государственный университет">КубГу</a></li>
-                                <li class="mb-2"><a href="https://kubsu.ru/" title="Кубанский государственный университет">КубГу</a></li>
-                                <li class="mb-2"><a href="#flowers">Картинки Цветов</a></li>
-                                <li class="mb-2"><a href="#cars">Картинки Машин</a></li>
-                                <li class="mb-2"><a href="index.html?category=flowers&user=123&profile=234">Ссылка с 3 параметрами в URL</a></li>
-                                <li class="mb-2"><a href="index.html?id=123">Ссылка с парамтером id в URL</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="./catalog.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-                                <li class="mb-2"><a href="./about.html">Ссылка на страницу в каталоге about</a></li>
-                                <li class="mb-2"><a href="../level1.html">Ссылка на страницу в каталоге уровнем выше</a></li>
-                                <li class="mb-2"><a href="../../level2.html">Ссылка на страницу в каталоге двумя уровнями выше</a></li>
-                                <li class="mb-2">
-                                    Сайт КубГу 
-                                    <a href="https://www.kubsu.ru">ссылка</a>
-                                </li>
-                                <li class="mb-2"><a href="https://www.kubsu.ru/ai/">Ссылка на фрагмент стороннего сайта</a></li>
-                                <li class="mb-2">Ссылки из прямоугольных и круглых областей картинки</li>
-                                <li class="mb-2">
-                                    <img src="data:image/jpeg;base64,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" usemap="#dog" class="img-fluid">
-                                    <map name="dog">
-                                        <area shape="rect" coords="0,0,251,274" href="https://www.kubsu.ru">
-                                        <area shape="circle" coords="400,64,64" href="https://www.kubsu.ru">
-                                    </map>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="product-card" data-value="2">
+                    <div class="product-icon">💻</div>
+                    <div class="product-details">
+                        <div class="product-name">Ноутбук</div>
+                        <div class="product-price">65 000 руб.</div>
                     </div>
-                    
-                    <div class="row mt-3">
-                        <div class="col-12 col-md-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="">Ссылка с пустым href</a></li>
-                                <li class="mb-2"><a>Ссылка без href</a></li>
-                                <li class="mb-2"><a href="index.html" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
-                                <li class="mb-2"><a href="index.html">Ссылка, запрещенная для индексации поисковиками</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <ol>
-                                <span>Нумерованный список ссылок</span>
-                                <li class="mb-1"><a href="https://www.kubsu.ru">1</a></li>
-                                <li class="mb-1"><a href="https://www.kubsu.ru">2</a></li>
-                                <li class="mb-1"><a href="https://www.kubsu.ru">3</a></li>
-                            </ol>
-                        </div>
+                </div>
+                <div class="product-card" data-value="3">
+                    <div class="product-icon">🎧</div>
+                    <div class="product-details">
+                        <div class="product-name">Наушники</div>
+                        <div class="product-price">8 500 руб.</div>
                     </div>
-                    
-                    
-                    <div class="calculator mt-5">
-                        <h3 class="mb-3">Калькулятор стоимости заказа</h3>
-                        <form id="order-calculator">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="product-quantity" class="form-label">Количество товара:</label>
-                                    <input type="number" class="form-control" id="product-quantity" name="quantity" min="1" value="1" required>
-                                </div>
-                                
-                                <div class="col-md-6 mb-3">
-                                    <label for="product-select" class="form-label">Выберите товар:</label>
-                                    <select class="form-select" id="product-select" name="product" required>
-                                        <option value="" disabled selected>-- Выберите товар --</option>
-                                        <option value="1000">Смартфон - 1000 руб.</option>
-                                        <option value="2500">Ноутбук - 2500 руб.</option>
-                                        <option value="500">Наушники - 500 руб.</option>
-                                        <option value="1500">Планшет - 1500 руб.</option>
-                                        <option value="300">Мышь - 300 руб.</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">Рассчитать стоимость</button>
-                            
-                            <div id="calculation-result" class="result mt-3" style="display: none;">
-                                
-                            </div>
-                        </form>
-                    </div>
-                    
-                    <section id="flowers" class="mt-5">
-                        <h2 class="mb-3">Цветы</h2>
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=a5498e3b778e7288972a389b1347df8a34c285d2-5539192-images-thumbs&n=13" 
-                                     alt="Цветок" class="img-fluid rounded">
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=fdbb661f48392c06d1c5132c5dea1bf8fd92f872-10848343-images-thumbs&n=13" 
-                                     alt="Цветок" class="img-fluid rounded">
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=520cb39eb89b65c49f32831a57a8f418ea2c9703-11416510-images-thumbs&n=13" 
-                                     alt="Цветок" class="img-fluid rounded">
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=fa1f027eac2ad2757040452f2c661253350ff87a-4497589-images-thumbs&n=13" 
-                                     alt="Цветок" class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </section>
-                    
-                    
-                    <section id="cars" class="mt-5">
-                        <h2 class="mb-3">Машины</h2>
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=2911ba41a9830014a5c3887ed9912c9af6881874-4611905-images-thumbs&n=13" 
-                                     alt="Машина" class="img-fluid rounded">
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=176bbbfb54917cc693f38482501736da5adb6cb3-10411335-images-thumbs&n=13" 
-                                     alt="Машина" class="img-fluid rounded">
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=02df2e402780ac75881c7d7b324cbe3b3c5050dc-12731609-images-thumbs&n=13" 
-                                     alt="Машина" class="img-fluid rounded">
-                            </div>
-                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                                <img src="https://avatars.mds.yandex.net/i?id=9a0fd91f4c2ae27fa545b67abfee9dffdce4f693-9181395-images-thumbs&n=13" 
-                                     alt="Машина" class="img-fluid rounded">
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
+            <select id="product" style="display: none;">
+                <option value="1">Смартфон - 25 000 руб.</option>
+                <option value="2">Ноутбук - 65 000 руб.</option>
+                <option value="3">Наушники - 8 500 руб.</option>
+            </select>
         </div>
         
-        
-        <div class="row mt-4">
-            <div class="col-12">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-custom text-center">
-                        <thead>
-                            <tr>
-                                <th>Первый</th>
-                                <th>Второй</th>
-                                <th>Третий</th>
-                                <th>Четвертый</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                            <tr>
-                                <td>П</td>
-                                <td>У</td>
-                                <td>П</td>
-                                <td>У</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="form-group">
+            <label for="quantity">Количество товара:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <div class="error" id="quantity-error">Введите корректное количество (не менее 1)</div>
         </div>
         
-       
-        <div class="row mt-4">
-            <div class="col-12">
-                <div class="p-3 p-md-4 rounded content-section">
-                    <form action="" method="POST">
-                        <h3 class="mb-3">Форма</h3>
-                        
-                        <div class="row">
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="field-name" class="form-label">Ваше ФИО:</label>
-                                <input type="text" class="form-control" id="field-name" name="field-name" placeholder="Введите ФИО">
-                            </div>
-                            
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="field-tel" class="form-label">Телефон:</label>
-                                <input type="tel" class="form-control" id="field-tel" name="field-tel" placeholder="Введите номер телефона">
-                            </div>
-                            
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="field-email" class="form-label">E-mail:</label>
-                                <input type="email" class="form-control" id="field-email" name="field-email" placeholder="Введите email">
-                            </div>
-                            
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="field-date" class="form-label">Дата рождения:</label>
-                                <input type="date" class="form-control" id="field-date" name="field-date" placeholder="Введите дату рождения">
-                            </div>
-                            
-                            <div class="col-12 mb-3">
-                                <p class="mb-2">Пол:</p>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="radio-group-1" id="male" value="Значение1">
-                                    <label class="form-check-label" for="male">Муж</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="radio-group-1" id="female" value="Значение2">
-                                    <label class="form-check-label" for="female">Жен</label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12 mb-3">
-                                <label for="listbox" class="form-label">Любимый язык программирования:</label>
-                                <select class="form-select" id="listbox" name="listbox" multiple>
-                                    <option value="Значение1" selected>Pascal</option>
-                                    <option value="Значение6" selected>Python</option>
-                                    <option value="Значение3" selected>C++</option>
-                                    <option value="Значение7" selected>Java</option>
-                                    <option value="Значение2" selected>C</option>
-                                </select>
-                            </div>
-                            
-                            <div class="col-12 mb-3">
-                                <label for="field-name-2" class="form-label">Биография:</label>
-                                <textarea class="form-control" id="field-name-2" name="field-name-2" rows="4">Расскажите о себе</textarea>
-                            </div>
-                            
-                            <div class="col-12 mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check-1" name="check-1" checked>
-                                    <label class="form-check-label" for="check-1">
-                                        С информацией ознакомлен(а)
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Сохранить</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+        <button id="calculate">Рассчитать стоимость</button>
+        
+        <div class="result" id="result">
+            <h3>Стоимость заказа:</h3>
+            <p id="total-cost">0 руб.</p>
+            <div class="product-info">
+                <span id="selected-product-info">Товар: -</span>
+                <span id="quantity-info">Количество: 0</span>
             </div>
         </div>
-    </main>
+    </div>
 
-    
-    <footer class="mt-5 py-3 footer-custom text-center text-light">
-        <div class="container">
-            <p class="mb-0">(с) Олександр Чил</p>
-        </div>
-    </footer>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    
-    <script>
-       
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            const calculatorForm = document.getElementById('order-calculator');
-            const quantityInput = document.getElementById('product-quantity');
-            const productSelect = document.getElementById('product-select');
-            const resultDiv = document.getElementById('calculation-result');
-            
-            
-            function calculateTotal() {
-                const quantity = parseInt(quantityInput.value);
-                const price = parseInt(productSelect.value);
-                
-                if (isNaN(quantity) || quantity < 1 || !price) {
-                    resultDiv.textContent = 'Пожалуйста, введите корректные данные';
-                    resultDiv.style.display = 'block';
-                    return;
-                }
-                
-                const total = quantity * price;
-                resultDiv.textContent = `Стоимость заказа: ${total} руб.`;
-                resultDiv.style.display = 'block';
-            }
-            
-           
-            calculatorForm.addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                calculateTotal();
-            });
-            
-            
-            quantityInput.addEventListener('input', function() {
-                if (productSelect.value) {
-                    calculateTotal();
-                }
-            });
-            
-            productSelect.addEventListener('change', function() {
-                if (quantityInput.value) {
-                    calculateTotal();
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
